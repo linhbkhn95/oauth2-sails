@@ -61,9 +61,9 @@ module.exports.policies = {
 
   },
   OAuth2Controller: {
-    descision: ['ensureLoggedIn'],
+    decision: ['ensureLoggedIn'],
     authorization: ['ensureLoggedIn', 'oauth2Auth'],
-    'token': ['isTrustedClient', 'clientAuth', 'grantToken', 'errorHandler']
+    token: ['isTrustedClient', 'clientAuth', 'grantToken', 'errorHandler']
   }
   // 'clientAuth',
 };
