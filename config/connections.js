@@ -33,6 +33,7 @@ module.exports.connections = {
   },
   redis: {
     adapter: "sails-redis",
+    // url:require('./env').redisUrl,
     port: require('./env').REDIS_PORT,
     host: require('./env').REDIS_HOST
   },
@@ -44,12 +45,12 @@ module.exports.connections = {
    * Run: npm install sails-mysql                                             *
    *                                                                          *
    ***************************************************************************/
-  someMysqlServer: {
+  mysql: {
     adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'sso'
   },
 
   /***************************************************************************

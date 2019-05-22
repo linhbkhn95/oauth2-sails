@@ -54,6 +54,7 @@ module.exports.routes = {
   //OAuth2 Routes
   'post /oauth/token': 'OAuth2Controller.token',
   'get /oauth/authorize': 'OAuth2Controller.authorization',
-  'post /oauth/authorize/decision': 'OAuth2Controller.decision'
+  'post /oauth/authorize/decision': 'OAuth2Controller.decision',
+  'post /twofactory/setup': 'TwofactorController.setUp'
 
 };

@@ -52,12 +52,12 @@ module.exports.session = {
    *                                                                          *
    ***************************************************************************/
 
-  // host: 'localhost',
-  // port: 6379,
+  host: require('./env').REDIS_HOST,
+  port: require('./env').REDIS_PORT,
   // ttl: <redis session TTL in seconds>,
-  // db: 0,
+  db: 3,
   // pass: <redis auth password>,
-  // prefix: 'sess:',
+  prefix: 'sess:',
 
 
   /***************************************************************************

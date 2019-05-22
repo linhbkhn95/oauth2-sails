@@ -34,5 +34,21 @@ module.exports = {
   // log: {
   //   level: "silent"
   // }
+  oauth: {
+    tokenLife: 360000
+  },
+  rabit: {
+    RABBITMQ_HOST: "192.168.1.93",
+    RABBITMQ_PORT: "5672",
+  },
 
+
+  bpsUrl: "http://192.168.1.92:1333", //link BPSService
+  bpsTimeout: 120000,
+  port: process.env.PORT || 1347,
+  redis: {
+    REDIS_HOST: "redis://cache",
+    REDIS_PORT: "6379",
+  },
+  redisUrl: 'redis://redis:6379',
 };

@@ -14,9 +14,9 @@ module.exports = function (req, res, next) {
     if (err) {
       return next(err); // will generate a 500 error
     }
-    console.log("buggg post/login");
-    console.log(err);
-    console.log('info,user', info, user);
+    // console.log("buggg post/login");
+    // console.log(err);
+    // console.log('info,user', info, user);
     // Generate a JSON response reflecting authentication status
     if (!user) {
       return res.render("login", {
@@ -30,13 +30,14 @@ module.exports = function (req, res, next) {
     // a response."
     // Source: http://passportjs.org/docs
     // ***********************************************************************
+
     req.login(user, loginErr => {
       if (loginErr) {
         return next(loginErr);
       }
-
       var url = "/";
       console.log(req.session);
+      req.session.user= user;
       if (req.session && req.session.returnTo) {
         url = req.session.returnTo;
         delete req.session.returnTo;

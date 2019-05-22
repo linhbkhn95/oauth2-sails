@@ -15,7 +15,7 @@ module.exports = {
     });
   },
   accessLogin: function (req, res) {
-
+    
   },
   info: function (req, res) {
     console.log('AuthController');

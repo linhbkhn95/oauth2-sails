@@ -56,14 +56,17 @@ module.exports.policies = {
   ],
   auth: {
     '*': true,
-    accessLogin: ['localAuth'],
-    info: ["oauthBearer('email')"]
+    'accessLogin': ['localAuth'],
+    'info': ["oauthBearer('email')"]
 
   },
   OAuth2Controller: {
-    decision: ['ensureLoggedIn'],
-    authorization: ['ensureLoggedIn', 'oauth2Auth'],
-    token: ['isTrustedClient', 'clientAuth', 'grantToken', 'errorHandler']
+    'decision': ['ensureLoggedIn'],
+    'authorization': ['ensureLoggedIn', 'oauth2Auth'],
+    'token': ['isTrustedClient', 'clientAuth', 'grantToken', 'errorHandler']
+  },
+  TwofactoryController: {
+    setUp: true
   }
   // 'clientAuth',
 };

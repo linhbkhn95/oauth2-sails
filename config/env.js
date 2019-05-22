@@ -6,7 +6,12 @@ module.exports = {
   RABBITMQ_PORT: "5672",
   REDIS_HOST: "localhost",
   REDIS_PORT: "6379",
+
   bpsUrl: "http://192.168.1.92:1333", //link BPSService
   bpsTimeout: 120000,
-  port: process.env.PORT || 1347
+  port: process.env.PORT || 1347,
+  // redisUrl: 'redis://redis:6379',
+  redisUrl: 'redis://localhost:6379',
+
+
 };

@@ -52,7 +52,7 @@ module.exports = {
     console.log(
       "   server.decision(function(req,done){ config/oauth2 line 254 "
     );
-    console.log(req.oauth2.req);
+    console.log('req.oauth2.req', req.oauth2.req);
     if (req.body["cancel"]) {
       //clear all cookie
       var cookie = req.cookies;
